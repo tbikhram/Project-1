@@ -7,7 +7,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-
+      
+<script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     </head>
@@ -19,11 +21,15 @@
       <div id="log-in">Log In</div>
       <div id="sign-up">Sign Up</div>
       <div id="faq">FAQ</div>
+      <div id="nav-toggle">&#9776;</div>
 </div>
 
 <div class="header"></div>
 
-<main class="map-space"><div id="image-holder"></div></main>
+<main class="map-space">
+ 
+
+  </main>
 
 <footer class="page-footer grey darken-4">
           <div class="container">
@@ -54,12 +60,12 @@
   <div class="modal-content">
     <span class="close">×</span>
     <input id="username" type="text" placeholder="Username">
-    <input id="username" type="text" placeholder="Password">
+    <input id="password" type="text" placeholder="Password">
     <button id="submit">Log In</button>
   </div>
 
 </div>
- <script src="assets/javascript/app.js"></script>
+<script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
