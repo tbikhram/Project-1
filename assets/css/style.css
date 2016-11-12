@@ -1,1 +1,147 @@
+<<<<<<< HEAD
 /*Random CSS test*/
+=======
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-smoothing: antialiased;
+}
+
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+ main {
+    flex: 1 0 auto;
+  }
+
+.header {
+	margin: 70px auto;
+	width: 75%;
+	min-height: 200px;
+	border: 1px solid black;
+	background-color: white;
+}
+
+.navigation-bar {
+	margin: 0 auto;
+	width: 100%;
+	min-width: 640px;
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+	position: fixed;
+	z-index: 100000;
+}
+
+.logo {
+	width: 144px;
+	height: 30px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.map-space {
+	margin: 0 auto;
+	border: 1px solid black;
+	width: 75%;
+	height: 500px;
+}
+
+.white-text {
+	font-size: 14px;
+}
+
+#log-in, #sign-up, #faq, #nav-toggle {
+	float: right;
+	line-height: 20px;
+	height: 50px;
+	width: 100px;
+	padding: 15px;
+	border-left: 1px solid #ccc;
+	text-align: center;
+	-o-transition:.7s;
+  	-ms-transition:.7s;
+  	-moz-transition:.7s;
+  	-webkit-transition:.7s;
+  /* ...and now for the proper property */
+ 	 transition:.7s;
+}
+
+#nav-toggle{
+	display: none;
+}
+
+#submit {
+	width: 95%;
+	text-align: center;
+	background-color: orange;
+	border: none;
+	border-radius: 10px;
+	color: white;
+	height: 40px;
+}
+
+#log-in:hover, #sign-up:hover, #faq:hover, #nav-toggle:hover {
+	background-color: #ddd;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    overflow: visible !important;
+    background-color: rgb(0,0,0)!important; /* Fallback color */
+    background-color: rgba(0,0,0,0.4)!important;
+}
+
+input {
+	border: 1px solid black !important;
+	padding: 5px !important;
+}
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 100px auto;
+    padding: 20px;
+    width: 25%;
+    height: 70%;
+    text-align:center;
+    min-width: 360px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+#log-in, #sign-up, #faq {
+	display: none;
+}
+
+#nav-toggle {
+	display: inline;
+}
+
+.navigation-bar {
+	min-width: 320px;
+}
+>>>>>>> 726884d9401964c45be5d42803b3a1872125f2af
