@@ -3,16 +3,16 @@ html, body {
 	padding: 0;
 	height: 100%;
 }
-  body {
+
+ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
 
-  main {
+ main {
     flex: 1 0 auto;
   }
-
 
 .header {
 	margin: 70px auto;
@@ -38,13 +38,13 @@ html, body {
 	margin-top: 10px;
 }
 
-
 .map-space {
 	margin: 0 auto;
 	border: 1px solid black;
 	width: 75%;
 	height: 500px;
 }
+
 .white-text {
 	font-size: 14px;
 }
@@ -75,7 +75,6 @@ html, body {
 	height: 40px;
 }
 
-
 #log-in:hover, #sign-up:hover, #faq:hover {
 	background-color: #ddd;
 }
@@ -91,7 +90,6 @@ html, body {
     overflow: visible !important;
     background-color: rgb(0,0,0)!important; /* Fallback color */
     background-color: rgba(0,0,0,0.4)!important;
-
 }
 
 /* Modal Content */
@@ -102,7 +100,6 @@ html, body {
     width: 25%;
     height: 70%;
     text-align:center;
-
 }
 
 /* The Close Button */
