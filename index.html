@@ -25,6 +25,9 @@
     <div id="sign-up">
         Sign Up
     </div>
+    <div id="search-button">
+        Search
+    </div>
     <div id="faq">
         FAQ
     </div>
@@ -35,25 +38,20 @@
 <div class="header">
     <div class="row">
         <div class="row buttons"></div>
-        <div class="col-sm-4 search">
-            <form id="search-form" name="search-form">
-                <label for="city-input">Enter City</label><br>
-                <input id="city-input" type="text"><br>
-                <label for="state-input">Enter State</label><br>
-                <input id="state-input" type="text"><br>
-                <input id="add-user-input" type="submit" value="Submit">
-            </form>
-        </div>
-        <div class="col-sm-8 cities"></div>
-        <div class="col-sm-8 new-cities"></div>
     </div>
 </div>
 <main class="map-space">
+    <div class="row">
+        <div class="col-sm-8 cities"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 new-cities"></div>
+    </div>
     <div class="panel panel-default">
         <div class="panel-heading" id="table-heading">
             Search History
         </div>
-        <table class="table added-train">
+        <table class="table added-destination">
             <tr>
                 <th>Destination</th>
                 <th>City</th>
@@ -91,6 +89,11 @@
 <div class="modal" id="myModal">
     <div class="modal-content">
         <span class="close">×</span> <input id="username" placeholder="Username" type="text"> <input id="password" placeholder="Password" type="text"> <button id="submit">Log In</button>
+    </div>
+</div>
+<div class="modal" id="search-modal">
+    <div class="modal-content">
+        <span class="search-close">×</span> <input id="city-input" placeholder="City" type="text"> <input id="state-input" placeholder="State" type="text"> <button id="add-user-input">Search</button>
     </div>
 </div>
 <script src="assets/javascript/app.js">

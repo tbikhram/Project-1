@@ -10,17 +10,25 @@ $(document).ready(function() {
     firebase.initializeApp(config);
     var database = firebase.database();
     var locations = [{
+        city: "Los Angeles",
+        state: "CA",
+        image: "assets/images/Los Angeles.png"
+    }, {
         city: "Denver",
-        state: "CO"
+        state: "CO",
+        image: "assets/images/Denver.png"
     }, {
         city: "Atlanta",
-        state: "GA"
+        state: "GA",
+        image: "assets/images/Atlanta.png"
     }, {
         city: "Austin",
-        state: "TX"
+        state: "TX",
+        image: "assets/images/Austin.png"
     }, {
-        city: "Los Angeles",
-        state: "CA"
+        city: "Seattle",
+        state: "WA",
+        image: "assets/images/Seattle.png"
     }];
     var newCity;
     var newState;
@@ -28,7 +36,8 @@ $(document).ready(function() {
     function showCity() {
         $(".buttons").empty();
         for (var i = 0; i < locations.length; i++) {
-            var buttons = $("<button>");
+            var buttons = $("<img>");
+            buttons.attr("src", locations[i].image)
             buttons.attr("data-city", locations[i].city);
             buttons.attr("data-state", locations[i].state);
             buttons.addClass("city-button");
@@ -125,14 +134,14 @@ $(document).ready(function() {
     })
     // when user input is added to Firebase, append the stored values to the page
     database.ref().on("child_added", function(childSnapshot) {
-        $(".added-train").append("<tr>+<td>" + "<button>Destination Link</button>" + "<td>" + childSnapshot.val().newCity + "<td>" + childSnapshot.val().newState);
+        $(".added-destination").append("<tr>+<td>" + "<button>Destination Link</button>" + "<td>" + childSnapshot.val().newCity + "<td>" + childSnapshot.val().newState);
     });
     // create on click event handler to display the weather if any of the topic buttons are clicked
     $(document).on('click', ".city-button", displayWeather);
     // run function to show the topics buttons
     showCity();
 });
-// Get the modal
+// Get the login modal
 var modal = document.getElementById('myModal');
 var btn = document.getElementById("log-in");
 var span = document.getElementsByClassName("close")[0];
@@ -145,5 +154,20 @@ span.onclick = function() {
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+    }
+}
+// Get the search modal
+var searchModal = document.getElementById("search-modal");
+var searchButton = document.getElementById("search-button");
+var searchSpan = document.getElementsByClassName("search-close")[0];
+searchButton.onclick = function() {
+    searchModal.style.display = "block";
+}
+searchSpan.onclick = function() {
+    searchModal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == searchModal) {
+        searchModal.style.display = "none";
     }
 }

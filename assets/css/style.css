@@ -43,7 +43,7 @@ main {
 .white-text {
 	font-size: 14px;
 }
-#log-in, #sign-up, #faq, #nav-toggle {
+#log-in, #sign-up, #search-button, #faq, #nav-toggle {
 	float: right;
 	line-height: 20px;
 	height: 50px;
@@ -61,7 +61,7 @@ main {
 #nav-toggle {
 	display: none;
 }
-#submit {
+#submit, #add-user-input {
 	width: 95%;
 	text-align: center;
 	background-color: orange;
@@ -70,7 +70,7 @@ main {
 	color: white;
 	height: 40px;
 }
-#log-in:hover, #sign-up:hover, #faq:hover, #nav-toggle:hover {
+#log-in:hover, #sign-up:hover, #search-button:hover, #faq:hover, #nav-toggle:hover {
 	background-color: #ddd;
 }
 .modal {
@@ -108,19 +108,19 @@ input {
 
 /* The Close Button */
 
-.close {
+.close, .search-close {
 	color: #aaaaaa;
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
 }
-.close:hover, .close:focus {
+.close:hover, .search-close:hover, .close:focus, .search-close:focus {
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
 }
 @media screen and (min-width: 320px) and (max-width: 640px) {
-	#log-in, #sign-up, #faq {
+	#log-in, #sign-up, #search-button, #faq {
 		display: none;
 	}
 	#nav-toggle {
